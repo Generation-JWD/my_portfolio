@@ -23,15 +23,33 @@
     <header>
       <!-- Starts Navigation -->
       <!-- Choose a nav component with the toggler classes (burger menu) -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">My Portfolio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" href="#projects">Projects</a>
+              <a class="nav-link" href="#contact">Contact Me</a>
+            </div>
+          </div>
+        </div>
+      </nav>
       <!-- Ends Navigation -->
+
+
       <!-- Starts Header Banner -->
-      <figure class="">
+      <figure class="position-relative">
         <img
-          class=""
+          class="img-fluid"
           src="images/jumbotron.jpg"
           alt="picture of a stockholm hotel"
         />
-        <h1 class="">Hi, I'm Mary Jay and I'm a Web Developer</h1>
+        <h1 class="position-absolute top-50 start-50 translate-middle bg-secondary text-white p-4 my-5 border border-white border-2 rounded text-center">Hi, I'm Mary Jay and I'm a Web Developer</h1>
       </figure>
       <!-- Ends Header Banner -->
     </header>
@@ -39,9 +57,9 @@
       <!-- 3 sections -->
       <!-- section 1 -->
       <section id="about">
-        <h2 class="">About Me</h2>
+        <h2 class="text-center my-5 py-3 bg-light text-secondary">About Me</h2>
         <!-- Starts Articles -->
-        <article class="">
+        <article class="container">
           <p>This is some text</p>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
@@ -94,9 +112,9 @@
       </section>
       <!-- section 2 -->
       <section id="projects">
-        <h2>My Projects</h2>
+        <h2 class="text-center py-3 bg-light text-secondary">My Projects</h2>
         <!-- Starts Articles -->
-        <article class="">
+        <article class="container mt-5">
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
             nesciunt, quaerat enim, reprehenderit ratione voluptatum sequi
@@ -112,45 +130,110 @@
           <!-- Ends Articles -->
           <!-- Start cards here - created a div to make cards responsive -->
           <!-- Go to components/cards to recreate the layout -->
-          <div class="">
-            <!-- Go to layout grid to find the respective responsive classes to use-->
+          <div class="row d-flex flex-row align-content-center mx-auto">
+            <!-- Go to layout grid to
+               find the respective responsive classes to use-->
             <!-- card 1 -->
-            <div class="">
+            <div class="col-8 col-md-6 col-lg-4 my-3">
               <!-- Paste bootstrap card 1 here -->
+              <div class="card" style="width: 18rem;">
+                <img src="./images/Atlasian.png" class="card-img-top" alt="Atlasian logo">
+                <div class="card-body">
+                  <h5 class="card-title">Atlasian</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">More</a>
+                </div>
+              </div>
             </div>
 
             <!-- card 2 -->
-            <div class="">
+            <div class="col-8 col-md-6 col-lg-4 my-3">
               <!-- Paste bootstrap card 2 here -->
+              <div class="card" style="width: 18rem;">
+                <img src="./images/Airbnb.png" class="card-img-top" alt="Airbnb logo">
+                <div class="card-body">
+                  <h5 class="card-title">Airbnb</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">More</a>
+                </div>
+              </div>
             </div>
 
             <!-- card 3 -->
-            <div class="">
+            <div class="col-8 col-md-6 col-lg-4 my-3">
               <!-- Paste bootstrap card 3 here -->
+              <div class="card" style="width: 18rem;">
+                <img src="./images/GitHub.png" class="card-img-top" alt="GitHub logo">
+                <div class="card-body">
+                  <h5 class="card-title">GitHub</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">More</a>
+                </div>
+              </div>
             </div>
           </div>
         </article>
       </section>
       <!-- section 3 -->
       <section id="contact">
-        <h2 class="">Let's connect!</h2>
+        <h2 class="text-center py-3 bg-light text-secondary">Let's connect!</h2>
         <!-- Starts Form -->
-        <form action="#" class="">
+        <form action="#" class="container">
           <!-- Starts text & telect inputs -->
           <!-- 
              1- Choose a form control and adapt it to the layout
              2 - Choose a select layout and adapt it to the layout 
             -->
+            <div class="mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="Your First Name">
+            </div>
+            <div class="mb-3">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Your Last Name">
+            </div>
+            <!-- start select  -->
+            <label for="country" class="form-label">Country</label>
+            <select class="form-select" id="country" aria-label="Country select">
+              <option selected>Australia</option>
+              <option value="Italy">Italy</option>
+              <option value="Japan">Japan</option>
+              <option value="NewZelenad">New Zelenad</option>
+            </select>
           <!-- Ends text & telect inputs -->
+
           <!-- Starts checkbox input -->
-          <p>How did you hear about me?</p>
           <!-- Choose a checkbox layout and adapt it to the layout  -->
+          <p class="mt-5">How did you hear about me?</p>
+          <div class="d-flex flex-row my-3">
+            <div class="form-check me-3">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Facebook
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+              <label class="form-check-label" for="flexCheckDefault">
+                Google
+              </label>
+            </div>
+          </div>
           <!-- Ends checkbox input -->
+
           <!-- Starts textarea input -->
           <!-- Choose a textarea from form control -->
+          <div class="mb-3">
+            <label for="comments" class="form-label">Comments</label>
+            <textarea class="form-control" id="comments" rows="3"></textarea>
+          </div>
           <!-- Ends textarea input -->
+
           <!-- Submit button -->
           <!-- Choose a button components -->
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
           <!-- Ends submit button -->
         </form>
         <!-- Ends form -->
@@ -158,7 +241,7 @@
     </main>
 
     <!-- footer -->
-    <footer class="">
+    <footer class="container d-flex flex-md-row-reverse flex-sm-column justify-content-between mt-5">
       <p class=""><a href="#">Back to top</a></p>
       <p>
         &copy; 2020-2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot;
